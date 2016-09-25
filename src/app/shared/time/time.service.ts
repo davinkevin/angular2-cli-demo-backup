@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import * as moment from 'moment';
 
 @Injectable()
 export class TimeService {
@@ -6,6 +7,6 @@ export class TimeService {
   constructor() { }
 
   getNow() {
-    return new Date().toString();
+    return moment().format('MMMM Do YYYY, h:mm:ss a');
   }
 }
